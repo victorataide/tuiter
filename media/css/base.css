@@ -1,0 +1,241 @@
+
+body { 
+		font-family:verdana;
+		font-size:12px; 
+		color:#636363;
+		text-align:justify;
+		background-color:white;
+		padding: 0px;
+        margin:auto;
+        width:800px;
+ 	 }
+
+td.label
+    { font-family:verdana;
+	    font-size:12px; 
+        font-weight:bold;
+	    color:blue;
+	    text-align:right;
+        margin: 0px;
+        padding-right: 10px;
+        width: 180px;
+    }
+    
+td.field
+    { font-family:verdana;
+	    font-size:12px; 
+	    color:black;
+	    text-align:left;
+        margin: 0px;
+        padding: 0px; 
+    }
+
+td.error
+    { font-family:verdana;
+	    font-size:12px;
+	    color:red;
+	    text-align:left;
+        margin:0px;
+        padding-top:20px;
+    }
+    
+td
+    { font-family:verdana;
+	    font-size:12px; 
+	    color:black;
+	    text-align:left;
+        margin: 0px;
+        padding: 0px; 
+    }
+    
+div.titlebar
+	{
+		width:780px;
+        height:140px;
+        float:top;
+		padding:10px;
+		background-color:D0D0D0;
+	}
+
+div.title
+	{
+	    color:blue;
+	    background-color:B0B0D0;
+	    padding:5px;
+        font-size:50px;
+	}
+
+div.content
+	{
+		width:580px;
+		padding:10px;
+		background-color:F0F0F0;
+        float:left;
+		margin:0px;
+	}
+    
+div.contenttitle
+	{
+        font-size:22px;
+    }
+    
+div.rightside
+	{
+		width:180px;
+		padding:10px;
+		background-color:D0F0D0;
+        float:right;
+		margin:0px;
+	}
+    
+div.form
+    {
+		width:550px;
+		padding:10px;
+		border:2px solid gray;
+		background-color:C0E0F0;
+    }
+    
+div.recurso
+    {
+		border:1px solid gray;
+		padding:10px;
+		background-color:C0E0F0;
+    }
+    
+div.post
+    {
+        padding:10px;
+        background-color:D0D0F0;
+        color:black;
+    }
+    
+div.user
+    {
+        padding:10px;
+        background-color:D0D0F0;
+    }
+    
+a.follow
+    {
+        width:60px;
+        height:30px;
+        border:2px solid #636363;
+        color:white;
+        font-size:16px;
+        background-color:30A030;
+    }
+    
+a.unfollow
+    {
+        width:60px;
+        height:30px;
+        border:2px solid #636363;
+        color:white;
+        font-size:16px;
+        background-color:A03030;
+    }
+    
+a.formtitle
+	{
+	    font-family:verdana;
+	    font-size:18px; 
+        font-weight:bold;
+	    color:#608090;
+	    text-align:left;
+        margin: 0px;
+        padding-right: 10px;
+        width: 140px;
+    }
+a.username
+    {
+	    font-family:verdana;
+	    font-size:18px; 
+        font-weight:bold;
+	    text-align:left;
+        margin: 0px;
+        padding-right: 10px;
+        width: 140px;
+    }
+
+div.titlesearch
+    {
+    }
+    	 
+input, textarea 
+     {
+     font-family:verdana,helvetica;
+	 font-size:12px;
+	 color:black; 
+	 border: 2px solid #636363;
+    }
+    
+input.message
+    {
+    width:500px;
+    height:40px;
+    }
+    
+ul.errorlist
+{
+	list-style-image:url('/media/img/icon_alert.gif');
+}
+
+ul.post
+{
+    list-style-type:none;
+    color:black;
+}
+
+ul.user
+{
+    list-style-type:none;
+}
+
+li.message
+{
+    color:black;
+    font-size:18px;
+}
+
+img.photo
+{
+    float:left;
+    margin-right:20px;
+    margin-left:0px;
+    width:80px;
+    height:80px;
+}
+img.photofollow
+{
+    margin:0px;
+    width:40px;
+    height:40px;
+}
+
+#menu {
+        background: #333;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+}
+#menu li {
+        float: left;
+        font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+}
+#menu a {
+        background: #333 url("/media/img/seperator.gif") bottom right no-repeat;
+        color: #ccc;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 8px 12px;
+        text-decoration: none;
+}
+#menu a:hover {
+        background: #2580a2 url("/media/img/hover.gif") bottom center no-repeat;
+        color: #fff;
+        padding-bottom: 8px;

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contenttitle">{{ auser }}</div>
+<img src="{{ media_url }}{{ auser.photo }}" style="width:80; height:80"></img><br>
+<ul class="post">
+<li>Nome: {{auser.name}}</li>
+<li>Sexo: {{auser.gender}}</li>
+</ul>
+{% if auser.login != user %}
+    {% if auser.followed %}
+    <a class="unfollow" href="follow?op=unfollow&login={{ auser.login }}">Deixar de seguir</a></li>
+    {% else %}
+    <a class="follow" href="follow?op=follow&login={{ auser.login }}">Seguir</a></li>
+    {% endif %}
+{% else %}
+<a href="signup">Alterar dados</a>
+{% endif %}
+{% include 'postlist_snip.html' %}
+{% endblock %}
+{% block rightside %}
+{% include 'follows_snip.html' %}
+{% endblock %}

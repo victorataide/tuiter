@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if logged %}
+    <div class="postform">
+        O que está acontecendo?
+        <form action="dopost" method="post">
+        <input id="id_message" type="text" class="message" name="message" value=""></textarea>
+        <input type="submit" value="Postar" />
+        </form>
+    </div>
+{% endif %}
+{% include 'postlist_snip.html' %}
+{% endblock %}
+{% block rightside %}
+{% include 'follows_snip.html' %}
+{% endblock %}

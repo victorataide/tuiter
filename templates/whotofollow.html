@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contenttitle">Quem Seguir</div>
+<div class="usersearch">
+<form action="whotofollow" method="get">
+<input type="text" name="term" value="" />
+<input type="submit" value="buscar" />
+</form>
+</div>
+{% include 'userlist_snip.html' %}
+{% endblock %}

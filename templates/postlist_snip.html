@@ -1,0 +1,16 @@
+{% if not posts %}
+<div class="post">
+Sem posts.
+</div>
+{% endif %}
+
+{% for post in posts %}
+<div class="post">
+<ul class="post">
+<img class="photo" src="{{ media_url }}{{ post.user.photo }}"></img><br>
+<li><b><a class="username" href="userpage?auser={{ post.user }}">{{ post.user }}</a></b></li>
+<li>{{ post.date }}</li>
+<li class="message">{{ post.message }}</li>
+</ul>
+</div>
+{% endfor %}

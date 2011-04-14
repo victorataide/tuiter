@@ -1,0 +1,34 @@
+
+Instruções para o correto funcionamento do Tuiter
+=================================================
+
+1. Pacotes extras:
+	python-django python-psycopg2 postgresql apache2
+
+2. Criando o banco de dados e definindo a senha para o usuário 'postgres':
+	No terminal, entrar:
+		sudo su - postgres
+		psql
+	No prompt do PostgreSQL, entrar:
+		create database tuiter;
+		alter user postgres with password 'admin';
+		\q
+	Ao voltar ao shell, dar 'exit' para sair do usuário postgres.
+
+3. Criando link simbólico para o conteúdo estático no Apache:
+	Entrar:
+		sudo su
+		cd /var/www
+		ln -s caminho_para_o_tuiter/media .
+		exit
+
+4. Sincronizar o banco de dados:
+	Na pasta do Tuiter, entrar:
+		python manage.py syncdb
+
+5. Rodar o servidor:
+	Na pasta do Tuiter, entrar:
+		python manage.py runserver
+
+6. Abrir um browser (ex. Firefox) no endereço http://localhost:8000
+

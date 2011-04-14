@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contenttitle">Postar</div>
+<form action="dopost" method="post">
+<p>
+<div class="form">
+<div class="formtitle">Post</div>
+<table border="0" cellspacing="1">
+    {% for field in formpost %}
+    <tr><td></td><td class="error">{{ field.errors }}</td></tr>
+    <tr>
+            <td class="label">{{ field.label_tag }}{% include 'required.html' %}</td>
+            <td class="field">{{ field }}</td>
+    </tr>
+    <tr></tr>
+    {% endfor %}
+</table>
+<ul class="errorlist">
+{% for error in errors %}
+<li>{{error}}</li>
+{% endfor %}
+</ul>
+</div>
+</p>
+<input type="submit" value="Postar" />
+</form>
+{% endblock %}

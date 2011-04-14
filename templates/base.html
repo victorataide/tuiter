@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Tuiter</title>
+<link href="{{ media_url }}css/base.css" rel="stylesheet" type="text/css"> </link>
+{% block class %}{% endblock %}
+</head>
+<body>
+<div class="titlebar">
+    <div class="title">
+        tuiter
+    </div>
+    <div class="titlesearch">
+        <form action="search" method="get">
+        <input id="id_term" type="text" name="term" value="" />
+        <input type="submit" value="buscar" />
+        </form>
+    </div>
+<!--
+    <ul class="titlemenu">
+    {% if logged %}
+    <li>Usuário: {{ user }}</li>
+    <li><a href='/'>Home</a></li>
+    <li><a href='userpage?auser={{ user }}'>Perfil</a></li>
+    <li><a href='whotofollow'>Quem Seguir</a></li>
+    <li><a href='logout'>Logout</a></li>
+    {% else %}
+    <li><a href='/'>Home</a></li>
+    <li><a href='login'>Login</a></li>
+    <li><a href='signup'>Cadastro</a></li>
+    {% endif %}
+    </ul>
+-->
+    <ul id="menu">
+    {% if logged %}
+        <li><a href="/" title="Home">Home</a></li>
+        <li><a href="whotofollow" title="Quem Seguir">Quem Seguir</a></li>
+        <li><a href="userpage?auser={{ user }}" title="Perfil">Perfil</a></li>
+        <li><a href="logout" title="Logout">Logout</a></li>
+    {% else %}
+        <li><a href="/" title="Home">Home</a></li>
+        <li><a href="login" title="Login">Login</a></li>
+        <li><a href="signup" title="Cadastro">Cadastro</a></li>
+    {% endif %}
+    </ul>
+</div>
+<div class="content">{% block content %}{% endblock %}</div>
+<div class="rightside">{% block rightside %}{% endblock %}</div>
+</body>
+</html>

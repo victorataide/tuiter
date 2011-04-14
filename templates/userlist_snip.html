@@ -1,0 +1,17 @@
+{% for auser in users %}
+{% if auser.login != user %}
+<div class="user">
+<ul class="user">
+<img class="photo" src="{{ media_url }}{{ auser.photo }}" style="width:80; height:80"></img><br>
+<li><a class="username" href="userpage?auser={{ auser.login }}"><b>{{ auser.login }}</b></a></li>
+<li>{{ auser.name }}</li>
+<li>{{ auser.gender }}</li>
+{% if auser.followed %}
+<li><a class="unfollow" href="follow?op=unfollow&login={{ auser.login }}">Deixar de seguir</a></li>
+{% else %}
+<li><a class="follow" href="follow?op=follow&login={{ auser.login }}">Seguir</a></li>
+{% endif %}
+</ul>
+</div>
+{% endif %}
+{% endfor %}

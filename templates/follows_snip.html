@@ -1,0 +1,21 @@
+{% if logged %}
+<div class="title2">Seguindo</div>
+<div class="followlist">
+{% for following in following_list %}
+<a href="userpage?auser={{ following }}"><img class="photofollow" src="{{ media_url }}{{ following.photo }}" title="{{ following }}"></img></a>
+{% empty %}
+<br><br><br>
+{% endfor %}
+</div>
+<br>
+<div class="title2">Seguido por</div>
+<div class="followlist">
+{% for followed in followed_list %}
+<a href="userpage?auser={{ followed }}"><img class="photofollow" src="{{ media_url }}{{ followed.photo }}" title="{{ followed }}"></img></a>
+{% empty %}
+<br><br><br>
+{% endfor %}
+</div>
+{% else %}
+<br><br><br>
+{% endif %}
